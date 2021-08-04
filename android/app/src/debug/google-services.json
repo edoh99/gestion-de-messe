@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "480199247015",
+    "project_id": "gestioneglise",
+    "storage_bucket": "gestioneglise.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:480199247015:android:8d6e38f1cc47c50b89c782",
+        "android_client_info": {
+          "package_name": "com.example.gestion_eglise"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "480199247015-dfga5s0p3f4hcpqnmedfuv47mdbp8joj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCCyS21Pzy1-e_tRag2WNysN5VyCGmeKdM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "480199247015-dfga5s0p3f4hcpqnmedfuv47mdbp8joj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
