@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:gestion_eglise/Services/admet.dart';
 import 'package:gestion_eglise/Pages/contacte.dart';
 import 'package:gestion_eglise/Pages/cultes.dart';
 import 'package:gestion_eglise/Pages/donnation.dart';
@@ -100,11 +99,6 @@ class NavigationDrawerWidget extends StatelessWidget {
       case 3:
         Navigator.of(context).push(MaterialPageRoute(
           builder: (context) => Contacts(),
-        ));
-        break;
-      case 4:
-        Navigator.of(context).push(MaterialPageRoute(
-          builder: (context) => AdmetPage(),
         ));
         break;
     }
