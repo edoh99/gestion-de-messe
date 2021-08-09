@@ -42,7 +42,7 @@ class _AccueilState extends State<Accueil> {
                     enableInfiniteScroll: true,
                     reverse: false,
                     autoPlay: true,
-                    autoPlayInterval: Duration(seconds: 10),
+                    autoPlayInterval: Duration(seconds: 5),
                     autoPlayAnimationDuration: Duration(milliseconds: 1800),
                     autoPlayCurve: Curves.fastOutSlowIn,
                     enlargeCenterPage: true,
