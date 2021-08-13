@@ -8,6 +8,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.6.1"
+  audioplayers:
+    dependency: "direct main"
+    description:
+      name: audioplayers
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.19.1"
   boolean_selector:
     dependency: transitive
     description:
@@ -202,6 +209,13 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  flutter_audio_recorder2:
+    dependency: "direct main"
+    description:
+      name: flutter_audio_recorder2
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.0.2"
   flutter_sound:
     dependency: "direct main"
     description:
@@ -304,7 +318,7 @@ packages:
     source: hosted
     version: "1.8.0"
   path_provider:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: path_provider
       url: "https://pub.dartlang.org"
@@ -367,7 +381,7 @@ packages:
     source: hosted
     version: "4.2.3"
   provider:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: provider
       url: "https://pub.dartlang.org"

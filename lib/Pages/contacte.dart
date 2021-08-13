@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../main.dart';
+
 class Contacts extends StatefulWidget {
   @override
   _ContactsState createState() => _ContactsState();
@@ -15,7 +17,12 @@ class _ContactsState extends State<Contacts> {
       extendBody: true,
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => Home()),
+          );
+        },
         child: Icon(
           Icons.home,
           color: Colors.white,

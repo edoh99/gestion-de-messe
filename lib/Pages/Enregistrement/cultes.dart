@@ -1,21 +1,26 @@
 import 'package:flutter/material.dart';
+import 'package:gestion_eglise/Pages/Enregistrement/views/recorder_home_view.dart';
+import 'package:gestion_eglise/main.dart';
 
-class Programmes extends StatefulWidget {
+class Cultes extends StatefulWidget {
   @override
-  _ProgrammesState createState() => _ProgrammesState();
+  _CultesState createState() => _CultesState();
 }
 
-class _ProgrammesState extends State<Programmes> {
+class _CultesState extends State<Cultes> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Programmes'),
-      ),
+      body: RecorderHomeView(title: 'Cultes'),
       extendBody: true,
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => Home()),
+          );
+        },
         child: Icon(
           Icons.home,
           color: Colors.white,

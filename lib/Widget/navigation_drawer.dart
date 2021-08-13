@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:gestion_eglise/Pages/contacte.dart';
-import 'package:gestion_eglise/Pages/cultes.dart';
+import 'package:gestion_eglise/Pages/Enregistrement/cultes.dart';
 import 'package:gestion_eglise/Pages/donnation.dart';
-import 'package:gestion_eglise/Pages/programmes.dart';
+import 'package:gestion_eglise/Pages/Programme/programmes.dart';
 
 class NavigationDrawerWidget extends StatelessWidget {
   final padding = EdgeInsets.symmetric(horizontal: 20);
@@ -11,7 +11,7 @@ class NavigationDrawerWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Drawer(
       child: Material(
-        color: Colors.blueAccent,
+        color: Colors.teal,
         child: ListView(
           padding: padding,
           children: <Widget>[

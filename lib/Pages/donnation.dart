@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../main.dart';
+
 class Donnations extends StatefulWidget {
   @override
   _DonnationsState createState() => _DonnationsState();
@@ -15,7 +17,12 @@ class _DonnationsState extends State<Donnations> {
       extendBody: true,
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => Home()),
+          );
+        },
         child: Icon(
           Icons.home,
           color: Colors.white,
