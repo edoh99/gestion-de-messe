@@ -5,9 +5,10 @@ class AuthentificationService {
   final FirebaseAuth _auth = FirebaseAuth.instance;
 
   AppUser? _userFormFirebaseUser(User user) {
+    // ignore: unnecessary_null_comparison
     return user != null ? AppUser(uid: user.uid) : null;
   }
-
+ 
   // Stream<AppUser> get user {
   //   return _auth.authStateChanges().map(_userFormFirebaseUser);
   // }

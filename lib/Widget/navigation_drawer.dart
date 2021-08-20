@@ -82,24 +82,32 @@ class NavigationDrawerWidget extends StatelessWidget {
   selectedItem(BuildContext context, int index) {
     switch (index) {
       case 0:
-        Navigator.of(context).push(MaterialPageRoute(
-          builder: (context) => Programmes(),
-        ));
+        Navigator.of(context).push(
+          MaterialPageRoute(
+            builder: (context) => Programmes(),
+          ),
+        );
         break;
       case 1:
-        Navigator.of(context).push(MaterialPageRoute(
-          builder: (context) => Cultes(),
-        ));
+        Navigator.of(context).push(
+          MaterialPageRoute(
+            builder: (context) => Cultes(),
+          ),
+        );
         break;
       case 2:
-        Navigator.of(context).push(MaterialPageRoute(
-          builder: (context) => Donnations(),
-        ));
+        Navigator.of(context).push(
+          MaterialPageRoute(
+            builder: (context) => Donnations(),
+          ),
+        );
         break;
       case 3:
-        Navigator.of(context).push(MaterialPageRoute(
-          builder: (context) => Contacts(),
-        ));
+        Navigator.of(context).push(
+          MaterialPageRoute(
+            builder: (context) => Contacts(),
+          ),
+        );
         break;
     }
   }
