@@ -51,7 +51,7 @@ class _SaveCultesState extends State<SaveCultes> {
 
   Widget buildStart() {
     final isRecording = recorder.isRecording;
-    final text = isRecording ? 'STOP' : 'START';
+    final text = isRecording ? 'ARRÊTER' : 'DÉBUT';
     final icon = isRecording ? Icons.stop : Icons.mic;
     final primary = isRecording ? Colors.red : Colors.white;
     final onPrimary = isRecording ? Colors.white : Colors.black;
@@ -82,7 +82,8 @@ class _SaveCultesState extends State<SaveCultes> {
   }
 
   Widget buildPlayer() {
-    final text = recorder.isRecording ? 'Now Recording' : ' Press Start';
+    final text =
+        recorder.isRecording ? 'Enregistrement en cours' : 'Appuyez sur Start';
 
     return CircleAvatar(
       radius: 10,
