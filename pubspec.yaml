@@ -17,11 +17,10 @@ dependencies:
   firebase_analytics: ^8.1.0
   carousel_slider: ^4.0.0
   cupertino_icons: ^1.0.3
-  flutter_sound: ^8.2.5
+  flutter_sound_lite: ^8.3.9
   provider: ^5.0.0
-  audioplayers: ^0.19.1
-  flutter_audio_recorder2: ^0.0.2
   path_provider: ^2.0.2
+  permission_handler: ^8.1.4+2
 
 dev_dependencies:
   flutter_test:
