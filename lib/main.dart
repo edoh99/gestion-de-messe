@@ -2,7 +2,6 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:gestion_eglise/Pages/Enregistrement/pageSave.dart';
 import 'package:gestion_eglise/accueil.dart';
-import 'Pages/authForm.dart';
 import 'Widget/navigation_drawer.dart';
 
 Future<void> main() async {
@@ -38,7 +37,7 @@ class _HomeState extends State<Home> {
     return Scaffold(
       drawer: NavigationDrawerWidget(),
       appBar: AppBar(
-        title: Text('Temple'),
+        title: Text('Temple de Dieu'),
         actions: [
           IconButton(
             icon: Icon(Icons.save),
@@ -54,10 +53,10 @@ class _HomeState extends State<Home> {
             onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => AuthentificateForm()),
+                MaterialPageRoute(builder: (context) => Start()),
               );
             },
-          )
+          ),
         ],
       ),
       body: Accueil(),
