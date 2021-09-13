@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../main.dart';
+import '../../main.dart';
 
 class Donnations extends StatefulWidget {
   @override
@@ -26,6 +26,17 @@ class _DonnationsState extends State<Donnations> {
         child: Icon(
           Icons.home,
           color: Colors.white,
+        ),
+      ),
+      body: SingleChildScrollView(
+        child: Container(
+          child: Column(
+            children: <Widget>[
+              Container(
+                height: 400,
+              )
+            ],
+          ),
         ),
       ),
       bottomNavigationBar: ClipRRect(

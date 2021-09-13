@@ -1,49 +1,34 @@
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:gestion_eglise/Pages/User.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 
-class AuthentificationService {
+class AuthService {
   final FirebaseAuth _auth = FirebaseAuth.instance;
+  final GoogleSignIn _googleSignIn = GoogleSignIn();
 
-  AppUser? _userFormFirebaseUser(User user) {
-    // ignore: unnecessary_null_comparison
-    return user != null ? AppUser(uid: user.uid) : null;
-  }
- 
-  // Stream<AppUser> get user {
-  //   return _auth.authStateChanges().map(_userFormFirebaseUser);
-  // }
+  // Connexion avec google
+  Future<UserCredential> signInWithGoogle() async {
+    // Declanchement des flux d'authentification
+    final googleUser = await _googleSignIn.signIn();
 
-  Future signInWithEmailAndPassword(String email, String password) async {
-    try {
-      UserCredential result = await _auth.signInWithEmailAndPassword(
-          email: email, password: password);
-      User? user = result.user;
-      return _userFormFirebaseUser(user!);
-    } catch (exception) {
-      print(exception.toString());
-      return null;
-    }
+    // Obtenir les details d'autorisation de la demande
+    final googleAuth = await googleUser!.authentication;
+
+    // Creation d'un nouvel identifiant
+    final credential = GoogleAuthProvider.credential(
+      accessToken: googleAuth.accessToken,
+      idToken: googleAuth.idToken,
+    );
+
+    // Renvoie d'identifiant de l'utilisateur apres connexion
+    return await _auth.signInWithCredential(credential);
   }
 
-  Future registerWithEmailAndPassword(String email, String password) async {
-    try {
-      UserCredential result = await _auth.signInWithEmailAndPassword(
-          email: email, password: password);
-      User? user = result.user;
+  // L'etat d'utilisateur en temps reel
+  Stream<User?> get user => _auth.authStateChanges();
 
-      return _userFormFirebaseUser(user!);
-    } catch (exception) {
-      print(exception.toString());
-      return null;
-    }
-  }
-
-  Future signOut() async {
-    try {
-      return await _auth.signOut();
-    } catch (exception) {
-      print(exception.toString());
-      return null;
-    }
+  // Deconnexion
+  Future<void> signOut() async {
+    await _googleSignIn.signOut();
+    await _auth.signOut();
   }
 }

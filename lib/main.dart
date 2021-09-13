@@ -51,10 +51,10 @@ class _HomeState extends State<Home> {
           IconButton(
             icon: Icon(Icons.person),
             onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => Start()),
-              );
+              // Navigator.push(
+              //   context,
+              //   MaterialPageRoute(builder: (context) => Start()),
+              // );
             },
           ),
         ],
