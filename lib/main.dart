@@ -1,6 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:gestion_eglise/Pages/Enregistrement/pageSave.dart';
+import 'package:gestion_eglise/Pages/LoginPage/start.dart';
 import 'package:gestion_eglise/accueil.dart';
 import 'Widget/navigation_drawer.dart';
 
@@ -15,6 +16,7 @@ class GestionEglise extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
+        textTheme: Theme.of(context).textTheme,
         bottomAppBarColor: Colors.teal,
         appBarTheme: AppBarTheme(color: Colors.teal),
         floatingActionButtonTheme:
@@ -51,10 +53,10 @@ class _HomeState extends State<Home> {
           IconButton(
             icon: Icon(Icons.person),
             onPressed: () {
-              // Navigator.push(
-              //   context,
-              //   MaterialPageRoute(builder: (context) => Start()),
-              // );
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => Start()),
+              );
             },
           ),
         ],
