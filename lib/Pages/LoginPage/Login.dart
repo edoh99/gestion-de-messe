@@ -69,6 +69,7 @@ class _LoginState extends State<Login> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        backgroundColor: Colors.white,
         extendBody: true,
         floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
         floatingActionButton: FloatingActionButton(
@@ -89,12 +90,13 @@ class _LoginState extends State<Login> {
               children: <Widget>[
                 Container(
                   height: 400,
-                  // child: Image(
-                  //   image: AssetImage("assets/login.jpg"),
-                  //   fit: BoxFit.contain,
-                  // ),
+                  child: Image(
+                    image: AssetImage('assets/login.jpg'),
+                    fit: BoxFit.cover,
+                  ),
                 ),
                 Container(
+                  margin: EdgeInsets.fromLTRB(20, 0, 20, 0),
                   child: Form(
                     key: _formKey,
                     child: Column(

@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_signin_button/flutter_signin_button.dart';
+import 'package:gestion_eglise/Pages/Donnations/donnation.dart';
 import 'package:gestion_eglise/Pages/LoginPage/Login.dart';
 import 'package:gestion_eglise/Pages/LoginPage/SignUp.dart';
 import 'package:gestion_eglise/main.dart';
@@ -27,19 +28,25 @@ class _StartState extends State<Start> {
         final UserCredential user =
             await _auth.signInWithCredential(credential);
 
-        await Navigator.pushReplacementNamed(context, "/");
+        await Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => Donnations(),
+          ),
+        );
 
         return user;
       } else {
-        throw StateError('Missing Google Auth Token');
+        throw StateError('Jeton d\'authentification Google manquant');
       }
     } else
-      throw StateError('Sign in Aborted');
+      throw StateError('Connexion Abandonnée');
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       extendBody: true,
       floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
       floatingActionButton: FloatingActionButton(
@@ -57,15 +64,14 @@ class _StartState extends State<Start> {
       body: SingleChildScrollView(
         child: Column(
           children: <Widget>[
-            SizedBox(height: 35.0),
+            SizedBox(height: 50),
             Container(
-              height: 400,
-              // child: Image(
-              //   image: AssetImage("assets/start.jpg"),
-              //   fit: BoxFit.contain,
-              // ),
+              height: 300,
+              child: Image(
+                image: AssetImage('assets/start.jpg'),
+                fit: BoxFit.cover,
+              ),
             ),
-            SizedBox(height: 20),
             RichText(
               text: TextSpan(
                 text: 'Bienvenue dans la maison de ',

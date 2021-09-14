@@ -1,7 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:google_sign_in/google_sign_in.dart';
-
+import 'package:gestion_eglise/Pages/LoginPage/Login.dart';
 import '../../main.dart';
 
 class Donnations extends StatefulWidget {
@@ -17,7 +16,12 @@ class _DonnationsState extends State<Donnations> {
   checkAuthentification() async {
     _auth.authStateChanges().listen((user) {
       if (user == null) {
-        Navigator.of(context).pushReplacementNamed("start");
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => Login(),
+          ),
+        );
       }
     });
   }
@@ -35,12 +39,12 @@ class _DonnationsState extends State<Donnations> {
     }
   }
 
-  signOut() async {
-    _auth.signOut();
+  // signOut() async {
+  //   _auth.signOut();
 
-    final googleSignIn = GoogleSignIn();
-    await googleSignIn.signOut();
-  }
+  //   final googleSignIn = GoogleSignIn();
+  //   await googleSignIn.signOut();
+  // }
 
   @override
   void initState() {
