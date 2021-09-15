@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:gestion_eglise/Pages/LoginPage/Login.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 import '../../main.dart';
 
 class Donnations extends StatefulWidget {
@@ -39,12 +40,12 @@ class _DonnationsState extends State<Donnations> {
     }
   }
 
-  // signOut() async {
-  //   _auth.signOut();
+  signOut() async {
+    _auth.signOut();
 
-  //   final googleSignIn = GoogleSignIn();
-  //   await googleSignIn.signOut();
-  // }
+    final googleSignIn = GoogleSignIn();
+    await googleSignIn.signOut();
+  }
 
   @override
   void initState() {

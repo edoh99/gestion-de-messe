@@ -1,9 +1,11 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:gestion_eglise/Pages/AdmetPage/AdmetHome.dart';
 import 'package:gestion_eglise/Pages/Enregistrement/pageSave.dart';
 import 'package:gestion_eglise/Pages/LoginPage/start.dart';
 import 'package:gestion_eglise/accueil.dart';
-import 'Widget/navigation_drawer.dart';
+import 'package:provider/provider.dart';
+import 'Widgets/navigation_drawer.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -14,16 +16,19 @@ Future<void> main() async {
 class GestionEglise extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: ThemeData(
-        textTheme: Theme.of(context).textTheme,
-        bottomAppBarColor: Colors.teal,
-        appBarTheme: AppBarTheme(color: Colors.teal),
-        floatingActionButtonTheme:
-            FloatingActionButtonThemeData(backgroundColor: Colors.teal),
+    return ChangeNotifierProvider(
+      create: (context) => AdmetHome(),
+      child: MaterialApp(
+        theme: ThemeData(
+          textTheme: Theme.of(context).textTheme,
+          bottomAppBarColor: Colors.teal,
+          appBarTheme: AppBarTheme(color: Colors.teal),
+          floatingActionButtonTheme:
+              FloatingActionButtonThemeData(backgroundColor: Colors.teal),
+        ),
+        home: Home(),
+        debugShowCheckedModeBanner: false,
       ),
-      home: Home(),
-      debugShowCheckedModeBanner: false,
     );
   }
 }
