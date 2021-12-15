@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gestion_eglise/Pages/Enregistrement/sound_recorder.dart';
-import 'package:gestion_eglise/Widgets/timer_widget.dart';
+import 'package:gestion_eglise/Widgets/Enregistrements/timer_widget.dart';
 
 class SaveCultes extends StatefulWidget {
   SaveCultes({Key? key}) : super(key: key);

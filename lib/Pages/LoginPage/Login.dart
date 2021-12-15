@@ -128,11 +128,13 @@ class _LoginState extends State<Login> {
                         RaisedButton(
                           padding: EdgeInsets.fromLTRB(30, 5, 30, 5),
                           onPressed: login,
-                          child: Text('Connexion',
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 20.0,
-                                  fontWeight: FontWeight.bold)),
+                          child: Text(
+                            'Connexion',
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 20.0,
+                                fontWeight: FontWeight.bold),
+                          ),
                           color: Colors.orange,
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(10.0),
